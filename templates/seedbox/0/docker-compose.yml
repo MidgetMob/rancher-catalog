@@ -15,14 +15,14 @@ services:
       io.rancher.container.pull_image: always
   sftp:
     image: atmoz/sftp
-      stdin_open: true
-      volumes:
-      - ${SFTPKEY}:/home/sftp/.ssh/keys/sftp.pub:ro
-      - seedbox-data:/home/sftp/seedbox:rw
-      tty: true
-      ports:
-      - ${SFPORT}:22/tcp
-      command:
-      - 'sftp::::'
-      labels:
-        io.rancher.container.pull_image: always
+    stdin_open: true
+    volumes:
+    - ${SFTPKEY}:/home/sftp/.ssh/keys/sftp.pub:ro
+    - seedbox-data:/home/sftp/seedbox:rw
+    tty: true
+    ports:
+    - ${SFPORT}:22/tcp
+    command:
+    - 'sftp::::'
+    labels:
+      io.rancher.container.pull_image: always

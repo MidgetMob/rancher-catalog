@@ -3,7 +3,6 @@ volumes:
   minecraft-data:
     external:
       name: minecraft-data-${SCALE}
-    driver: 'null'
 services:
   mcmyadmin:
     image: jschulberger/mcmyadmin

@@ -8,7 +8,7 @@ services:
     image: jschulberger/mcmyadmin
     stdin_open: true
     volumes:
-    - minecraft-data-${SCALE}:/home/mcmyadmin/Minecraft
+    - minecraft-data:/home/mcmyadmin/Minecraft
     tty: true
     ports:
     - ${WPORT}:8080/tcp
@@ -20,7 +20,7 @@ services:
     stdin_open: true
     volumes:
     - ${SFTPKEY}:/home/sftp/.ssh/keys/sftp.pub:ro
-    - minecraft-data-${SCALE}:/home/sftp/Minecraft:rw
+    - minecraft-data:/home/sftp/Minecraft:rw
     tty: true
     ports:
     - ${SFPORT}:22/tcp

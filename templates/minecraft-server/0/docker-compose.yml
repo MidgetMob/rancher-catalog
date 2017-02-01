@@ -1,7 +1,6 @@
 version: '2'
 volumes:
   minecraft-data:
-    external: false
     name: minecraft-data-${SCALE}
     driver: 'null'
 services:

@@ -1,0 +1,4 @@
+name: Seedbox
+description: A seedbox powered by deluge with sftp access.
+version: v0.1
+category: Entertainment

@@ -4,12 +4,6 @@
   description: "Minecraft server with McMyAdmin web ui"
   uuid: minecraft-server-0
   questions:
-    - variable: "SCALE"
-      label: "Number of servers"
-      description: "How many servers should there be?"
-      default: 1
-      required: true
-      type: "int"
     - variable: "WPORT"
       label: "Web port number"
       description: "On which port should the web ui listen?"
@@ -35,8 +29,8 @@
       required: true
       type: "string"
 mcmyadmin:
-    scale: ${SCALE}
+    scale: 1
     start_on_create: true
 sftp:
-    scale: ${SCALE}
+    scale: 1
     start_on_create: true

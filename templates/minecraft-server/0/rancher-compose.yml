@@ -1,19 +1,18 @@
-version: '2'
-services:
-  mcmyadmin:
+.catalog:
+  name: "Minecraft Server"
+  version: "v0.1"
+  description: "Minecraft server with McMyAdmin web ui"
+  uuid: minecraft-server-0
+  questions:
+    - variable: "v"
+      label: "l"
+      description: "d"
+      default: 8112
+      required: true
+      type: "int"
+mcmyadmin:
     scale: 1
     start_on_create: true
   sftp:
     scale: 1
     start_on_create: true
-.catalog:
-  name: minecraft-server
-  versions: 0
-  description: de
-  questions:
-    - variable: v
-      label: l
-      description: | d
-      default: 8112
-      required: true
-      type: int

@@ -2,7 +2,7 @@ version: '2'
 volumes:
   minecraft-data:
     external:
-      name: minecraft-data-alt
+      name: minecraft-data-${SCALE}
 services:
   mcmyadmin:
     image: jschulberger/mcmyadmin

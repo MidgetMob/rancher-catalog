@@ -19,8 +19,8 @@ services:
     image: atmoz/sftp
     stdin_open: true
     volumes:
-    - "${SFTPKEY}:/home/sftp/.ssh/keys/sftp.pub"
-    - "minecraft-data:/home/sftp/Minecraft"
+    - ${SFTPKEY}:/home/sftp/.ssh/keys/sftp.pub
+    - minecraft-data:/home/sftp/Minecraft
     tty: true
     ports:
     - ${SFPORT}:22/tcp

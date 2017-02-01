@@ -4,15 +4,15 @@
   description: "Minecraft server with McMyAdmin web ui"
   uuid: minecraft-server-0
   questions:
-    - variable: "v"
-      label: "l"
-      description: "d"
-      default: 8112
+    - variable: "PORT"
+      label: "Port number"
+      description: "On which port should the Load Balancer listen?"
+      default: 25565
       required: true
       type: "int"
 mcmyadmin:
     scale: 1
     start_on_create: true
-  sftp:
+sftp:
     scale: 1
     start_on_create: true

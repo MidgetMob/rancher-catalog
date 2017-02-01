@@ -6,19 +6,19 @@
   questions:
     - variable: "WPORT"
       label: "Web port number"
-      description: "On which port should the web ui listen?"
+      description: "Host port to be used for the web ui"
       default: 8112
       required: true
       type: "int"
     - variable: "SFPORT"
       label: "SFTP port number"
-      description: "On which port should the sftp server listen?"
+      description: "Host port to be used for SFTP"
       default: 2323
       required: true
       type: "int"
     - variable: "SFTPKEY"
       label: "SSH key for SFTP"
-      description: "Specify the path on the host for the ssh/sftp key."
+      description: "Path on the host that points to the public key (SFTP auth)"
       default: "/opt/service-keys/sftp.pub"
       required: true
       type: "string"

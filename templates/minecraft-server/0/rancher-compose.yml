@@ -4,15 +4,39 @@
   description: "Minecraft server with McMyAdmin web ui"
   uuid: minecraft-server-0
   questions:
-    - variable: "PORT"
-      label: "Port number"
-      description: "On which port should the Load Balancer listen?"
+    - variable: "SCALE"
+      label: "Number of servers"
+      description: "How many servers should there be?"
+      default: 1
+      required: true
+      type: "int"
+    - variable: "WPORT"
+      label: "Web port number"
+      description: "On which port should the web ui listen?"
+      default: 8181
+      required: true
+      type: "int"
+    - variable: "SPORT"
+      label: "Server port number"
+      description: "On which port should the server listen?"
       default: 25565
       required: true
       type: "int"
+    - variable: "SFPORT"
+      label: "SFTP port number"
+      description: "On which port should the sftp server listen?"
+      default: 2323
+      required: true
+      type: "int"
+    - variable: "SSHKEY"
+      label: "SSH key for SFTP"
+      description: "Specify the path on the host for the ssh/sftp key."
+      default: "/opt/service-keys/sftp.pub"
+      required: true
+      type: "string"
 mcmyadmin:
-    scale: 1
+    scale: ${SCALE}
     start_on_create: true
 sftp:
-    scale: 1
+    scale: ${SCALE}
     start_on_create: true

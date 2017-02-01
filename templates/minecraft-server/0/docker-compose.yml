@@ -1,7 +1,7 @@
 version: '2'
 volumes:
   minecraft-data:
-    name: minecraft-data-temp
+    name: minecraft-data-${SCALE}
 services:
   mcmyadmin:
     image: jschulberger/mcmyadmin

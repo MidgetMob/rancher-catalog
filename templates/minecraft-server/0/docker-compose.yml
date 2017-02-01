@@ -1,0 +1,30 @@
+version: '2'
+volumes:
+  minecraft-data:
+    external: true
+    driver: 'null'
+services:
+  mcmyadmin:
+    image: jschulberger/mcmyadmin
+    stdin_open: true
+    volumes:
+    - minecraft-data:/home/mcmyadmin/Minecraft
+    tty: true
+    ports:
+    - 8181:8080/tcp
+    - 25565:25565/tcp
+    labels:
+      io.rancher.container.pull_image: always
+  sftp:
+    image: atmoz/sftp
+    stdin_open: true
+    volumes:
+    - /opt/service-keys/sftp.pub:/home/sftp/.ssh/keys/sftp.pub:ro
+    - minecraft-data:/home/sftp/Minecraft
+    tty: true
+    ports:
+    - 2169:22/tcp
+    command:
+    - 'sftp::::'
+    labels:
+      io.rancher.container.pull_image: always

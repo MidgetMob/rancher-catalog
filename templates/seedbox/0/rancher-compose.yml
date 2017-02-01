@@ -4,7 +4,7 @@
   description: "Seedbox powered by deluge with sftp support"
   uuid: seedbox-0
   questions:
-  - variable: "WPORT"
+    - variable: "WPORT"
       label: "Web port number"
       description: "On which port should the web ui listen?"
       default: 8112

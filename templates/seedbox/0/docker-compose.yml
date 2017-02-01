@@ -7,7 +7,7 @@ services:
     image: jschulberger/deluge
     stdin_open: true
     volumes:
-    - seedbox-data:/home/deluge
+    - seedbox-data:/home/deluge:rw
     tty: true
     ports:
     - ${WPORT}:8112/tcp

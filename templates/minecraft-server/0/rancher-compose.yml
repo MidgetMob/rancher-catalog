@@ -28,7 +28,7 @@
       default: 2323
       required: true
       type: "int"
-    - variable: "SSHKEY"
+    - variable: "SFTPKEY"
       label: "SSH key for SFTP"
       description: "Specify the path on the host for the ssh/sftp key."
       default: "/opt/service-keys/sftp.pub"

@@ -8,7 +8,7 @@ services:
     image: jschulberger/mcmyadmin
     stdin_open: true
     volumes:
-    - minecraft-data:/home/mcmyadmin/Minecraft
+    - minecraft-data-${SCALE}:/home/mcmyadmin/Minecraft
     tty: true
     ports:
     - ${WPORT}:8080/tcp

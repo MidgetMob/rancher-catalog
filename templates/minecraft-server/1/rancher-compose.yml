@@ -1,0 +1,36 @@
+.catalog:
+  name: "Minecraft Server"
+  version: "v0.2"
+  description: "Minecraft server with McMyAdmin web ui"
+  uuid: minecraft-server-0
+  questions:
+    - variable: "WPORT"
+      label: "Web port number"
+      description: "Host port to be used for the web ui"
+      default: 8181
+      required: true
+      type: "int"
+    - variable: "SPORT"
+      label: "Server port number"
+      description: "Host port to be used for the minecraft server"
+      default: 25566
+      required: true
+      type: "int"
+    - variable: "SFPORT"
+      label: "SFTP port number"
+      description: "Host port to be used for SFTP"
+      default: 2323
+      required: true
+      type: "int"
+    - variable: "SFTPKEY"
+      label: "SSH key for SFTP"
+      description: "Path on the host that points to the public key (SFTP auth)"
+      default: "/opt/service-keys/sftp.pub"
+      required: true
+      type: "string"
+mcmyadmin:
+    scale: 1
+    start_on_create: true
+sftp:
+    scale: 1
+    start_on_create: true

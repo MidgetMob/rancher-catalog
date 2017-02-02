@@ -21,7 +21,7 @@ services:
     - ALLOWED_NETWORKS=10.10.0.0/24
     stdin_open: true
     volumes:
-    - plex-data:/data
+    - plex-data:/data:rw
     - /config
     - /transcode
     tty: true

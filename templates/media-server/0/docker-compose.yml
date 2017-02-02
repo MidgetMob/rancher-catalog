@@ -28,7 +28,7 @@ services:
     - 32400:32400/tcp
     labels:
       io.rancher.container.pull_image: always
-sftp:
+  sftp:
     image: atmoz/sftp
     stdin_open: true
     volumes:

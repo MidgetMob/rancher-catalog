@@ -24,6 +24,7 @@ services:
     - plex-data:/data
     - /config
     - /transcode
+    tty: true
     ports:
     - 32400:32400/tcp
     labels:

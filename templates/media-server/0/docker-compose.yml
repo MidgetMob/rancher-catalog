@@ -18,7 +18,7 @@ services:
   plex:
     image: plexinc/pms-docker
     environment: 
-    - ALLOWED_NETWORKS="10.10.0.0/24"
+    - ALLOWED_NETWORKS=10.10.0.0/24
     stdin_open: true
     volumes:
     - plex-data:/data

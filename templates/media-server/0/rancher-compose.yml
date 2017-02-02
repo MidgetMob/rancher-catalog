@@ -16,6 +16,12 @@
       default: 8112
       required: true
       type: "int"
+    - variable: "SFPORT"
+      label: "SFTP port number"
+      description: "Host port to be used for SFTP"
+      default: 2323
+      required: true
+      type: "int"
     - variable: "SFTPKEY"
       label: "SSH key for SFTP"
       description: "Path on the host that points to the public key (SFTP auth)"

@@ -19,7 +19,6 @@ services:
     image: plexinc/pms-docker
     environment: 
     - ALLOWED_NETWORKS=10.10.0.0/24
-    - CHANGE_CONFIG_DIR_OWNERSHIP=FALSE
     stdin_open: true
     volumes:
     - plex-data:/data:rw

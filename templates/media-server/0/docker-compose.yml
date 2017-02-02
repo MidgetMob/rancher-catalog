@@ -16,7 +16,7 @@ services:
     labels:
       io.rancher.container.pull_image: always
   plex:
-    image: plexinc/pms-docker
+    image: jschulberger/pms
     environment: 
     - ALLOWED_NETWORKS=10.10.0.0/24
     stdin_open: true

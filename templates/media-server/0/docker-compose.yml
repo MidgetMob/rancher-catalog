@@ -19,6 +19,8 @@ services:
     image: plexinc/pms-docker
     environment: 
     - ALLOWED_NETWORKS=10.10.0.0/24
+    - PLEX_UID=1000
+    - PLEX_GID=1000
     stdin_open: true
     volumes:
     - plex-data:/data:rw

@@ -1,1 +1,33 @@
 .catalog:
+  name: "Media Server"
+  version: "v0.1"
+  description: "Plex, Deluge, and SFTP"
+  uuid: media-server-0
+  questions:
+    - variable: "PLPORT"
+      label: "Plex web ui port"
+      description: "The port plex should be reachable on"
+      default: 32400
+      required: true
+      type: "int"
+    - variable: "WPORT"
+      label: "Web port number"
+      description: "Host port to be used for the deluge web ui"
+      default: 8112
+      required: true
+      type: "int"
+    - variable: "SFTPKEY"
+      label: "SSH key for SFTP"
+      description: "Path on the host that points to the public key (SFTP auth)"
+      default: "/opt/service-keys/sftp.pub"
+      required: true
+      type: "string"
+deluge:
+    scale: 1
+    start_on_create: true
+plex:
+    scale: 1
+    start_on_create: true
+sftp:
+    scale: 1
+    start_on_create: true

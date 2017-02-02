@@ -1,1 +1,4 @@
 name: Media Server
+description: A media server with Deluge, Plex, and SFTP access
+version: v0.1
+category: Entertainment

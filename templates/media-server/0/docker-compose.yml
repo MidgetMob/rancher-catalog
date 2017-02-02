@@ -28,6 +28,7 @@ services:
     tty: true
     ports:
     - 32400:32400/tcp
+    command: 'chown -R plex:plex /data'
     labels:
       io.rancher.container.pull_image: always
   sftp:
